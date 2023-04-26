@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
-  * print_sign - prints n> 0, 0 for n<= 0
+  * print_sign - prints +for n> 0, 0 for n= 0, - for n <0
   * @n: integers
   * Return: based on output
   */
 
 int print_sign(int n)
+{
 
 	if (n > 0)
 	{
