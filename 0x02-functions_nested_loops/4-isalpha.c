@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-  * _isalpha - check case of letters
-  * @c: takes input from another funstion
-  * Return: 1 is true ,0 otherwisr
-  */
+ * _isalpha - check case of letters
+ * @c: takes input from another funstion
+ * Return: 1 is true ,0 otherwisr
+ */
 
 int _isalpha(int c)
 {
