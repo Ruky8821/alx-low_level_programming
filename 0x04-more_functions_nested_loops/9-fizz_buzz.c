@@ -20,7 +20,7 @@ int main(void)
 		{
 			printf("buzz");
 		}
-		if (((n % 3 == 0) && (n & 5 == 0)))
+		if (n % 3 == 0 && n & 5 == 0)
 		{
 			printf("fizzBuzz");
 		}
