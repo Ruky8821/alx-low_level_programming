@@ -11,7 +11,7 @@ int main(void)
 	{
 		putchar(p + 48);
 	}
-	for (q = 97; q <= 101; q++)
+	for (q = 97; q <= 102; q++)
 	{
 		putchar(q);
 	}
