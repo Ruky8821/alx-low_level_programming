@@ -1,15 +1,17 @@
 #include "main.h"
 /**
- * reverse_array - output array in reverse
- * @a: pointer to the array
- * @n: length of array
+ * reverse_array - outputs an array in reversed order.
+ * @a: pointer
+ * @n: size of array
  */
 void reverse_array(int *a, int n)
 {
 	int x, y;
 
-	for (x = n; x >= 0; x--)
+	for (x = 0; x < n--; x++)
 	{
-		return (a[x]
+		y = a[x];
+		a[x] = a[n];
+		a[n] = y;
 	}
 }
