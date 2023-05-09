@@ -2,7 +2,7 @@
 /**
  * _strspn - length of s
  * @s: character pointer
- * @accepted: character pointer
+ * @accept: character pointer
  * Return: returns the last count of i
  */
 unsigned int _strspn(char *s, char *accept)
