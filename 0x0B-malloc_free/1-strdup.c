@@ -17,14 +17,16 @@ char *_strdup(char *str)
 	}
 	for (j = 0; str[j] != '\0'; j++)
 	{
-		if (i <= j)
+		if (p == 0)
 		{
-			p[i] = str[i];
-			i++;
+			return (NULL);
 		}
 		else
 		{
-			return (NULL);
+			for (i = 0; i <= j; i++)
+			{
+				p[i] = str[i];
+			}
 		}
 	}
 	return (p);
