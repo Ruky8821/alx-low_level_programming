@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _atoi- prints cahracters along with + and -
+ * _atoi - prints characters with signs
  * @s: pointer
- * Return: return l
+ * Return: 1 on success
  */
-int _atoi(char *s)
+int _atoi(char *s);
 {
 	int i = 0;
 	int num = 0;
