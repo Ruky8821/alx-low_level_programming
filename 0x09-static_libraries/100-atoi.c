@@ -1,9 +1,9 @@
 #include "main.h"
- /**
-  * _atoi - prints cahracters along with + and -
-  * @s: pointer
-  * Return: return l
-  */
+/**
+ * _atoi- prints cahracters along with + and -
+ * @s: pointer
+ * Return: return l
+ */
 int _atoi(char *s)
 {
 	int i = 0;
