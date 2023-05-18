@@ -17,13 +17,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (x = 0; s1[x] != '\0'; x++)
 		size_s1 = x;
 	for  (y = 0; s2[y] != '\0'; y++)
-		;
+		n = y;
 	/*checking is string passed is null*/
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	sptr = malloc(size_s1 + n);
+	sptr = malloc(size_s1 + n + 1);
 	if (sptr == NULL)
 		return (NULL); /* s1 and s2 are empty*/
 	for (m = 0; s1[m] != '\0'; m++)
