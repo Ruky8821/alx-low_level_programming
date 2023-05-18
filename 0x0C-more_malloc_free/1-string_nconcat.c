@@ -27,9 +27,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	sptr = (char *) malloc((size_s1 + n + 1) * sizeof(char));
 	if (sptr == NULL)
 		return (NULL); /* s1 and s2 are empty*/
+	if (n > y )
+		n = y;
 	for (m = 0; s1[m] != '\0'; m++)
 		sptr[m] = s1[m];
-	for (p = 0; p < n; p++)
+	for (p = 0; p < (n); p++)
 	{
 		sptr[m] =  s2[p];
 		m++;
