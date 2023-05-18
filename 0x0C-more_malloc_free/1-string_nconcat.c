@@ -10,13 +10,13 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *sptr;
-	unsigned int m, p, x, y, size_s1;
+	unsigned int m, p, x, y, size_s1 = 0;
 
 	p = 0;
 	/* length of string */
-	for (x = 0; x != '\0'; x++)
+	for (x = 0; s1[x] != '\0'; x++)
 		size_s1 = x;
-	for  (y = 0; y != '\0'; y++)
+	for  (y = 0; s2[y] != '\0'; y++)
 		;
 	/*checking is string passed is null*/
 	if (s1 == NULL)
