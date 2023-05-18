@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = y;
 	for (m = 0; s1[m] != '\0'; m++)
 		sptr[m] = s1[m];
-	for (p = 0; p < (n); p++)
+	for (p = 0; p < (size_s1 + n); p++)
 	{
 		sptr[m] =  s2[p];
 		m++;
