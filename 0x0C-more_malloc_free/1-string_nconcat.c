@@ -27,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL); /* s1 and s2 are empty*/
 	for (m = 0; s1[m] != '\0'; m++)
 		sptr[m] = s1[m];
-	for (p = 0; s2[p] != '\0'; p++)
+	for (p = 0; p < n; p++)
 	{
 		sptr[m] =  s2[p];
 		m++;
