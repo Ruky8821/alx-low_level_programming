@@ -10,9 +10,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i = n;
 	va_list cont;
 
-	va_start(cont, n);
 	if  (separator == NULL)
+		printf("\n");
 		return;
+	va_start(cont, n);
 	while (i--)
 	{
 		if (separator && n)
