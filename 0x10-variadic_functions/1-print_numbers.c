@@ -11,8 +11,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list cont;
 
 	if  (separator == NULL)
-		printf("\n");
-		return;
+	{		printf("\n");
+			return;
+	}
 	va_start(cont, n);
 	while (i--)
 	{
