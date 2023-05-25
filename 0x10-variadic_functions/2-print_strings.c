@@ -1,4 +1,4 @@
-include "variadic_functions.h"
+#include "variadic_functions.h"
 /**
  * print_strings - prints strings with separator
  * @separator: separating characters
@@ -21,8 +21,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 			printf("%s", string);
 		if ((i < n) && separator != NULL)
- 			printf("%s", separator);
-      
+			printf("%s", separator);
 	}
 	va_end(cont);
 	printf("\n");
