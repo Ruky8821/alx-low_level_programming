@@ -1,39 +1,35 @@
 #include "lists.h"
+#include <string.h>
 
 /**
- * add_node - adds a new node.
- * @head: pointer to the list
- * @str: new string to add
- * Return: the address of the new element, or NULL if it fails
- */
+ * add_node - adds a node to a linked list
+ * @str: a pointer to data part of the linked list
+ * @head: the holds the address of the first node
+ * Return: *head on success or NULL if fails
+*/
 list_t *add_node(list_t **head, const char *str)
 {
-	if (str == NULL)
-		return (NULL);
-
-	list_t *new = (list_t *) malloc(sizeof(list_t));
-
-	if (new == NULL)
-		return (NULL);
-    /** Calculate the length of the string manually */
 	int len = 0;
+	list_t *new = malloc(sizeof(list_t));
 
-	while (str[len] != '\0')
+	if (!new)
+	{
+		free (new);
+		return (NULL);
+	}
+	if (str)
+		new->str = strdup(str);
+	else
+		return (NULL);
+
+	while (str[len])
 		len++;
 
-	new->str = (char *) malloc((len + 1) * sizeof(char));
-	if (new->str == NULL)
-	{
-		free(new);
-		return (NULL);
-	}
-	new->str[len] = '\0';
 	new->len = len;
 	new->next = NULL;
-	if (*head == NULL)
-	{
-		*head = new;
-	}
+
+	if (!head)
+		*head = NULL;
 	else
 	{
 		new->next = *head;
@@ -41,3 +37,4 @@ list_t *add_node(list_t **head, const char *str)
 	}
 	return (*head);
 }
+
