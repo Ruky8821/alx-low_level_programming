@@ -2,7 +2,7 @@ section .data
 	message db "Hello, Holberton", 0x0a
 	len equ $ - message
 section .text
-	global main 
+	global main
 main:
 	mov edi, 1
 	mov edx, len
