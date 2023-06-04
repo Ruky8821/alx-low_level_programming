@@ -6,20 +6,14 @@
  */
 void _print_rev_recursion(char *s)
 {
-	int i;
-	int n = 0;
-	char tmp;
+	int i, n = 0;
 
-	for (i = 0; *s != '\0'; i++)
+	for {i = 0; i != '\0'; i++)
 	{
-		n++;
+		n++
 	}
-
-	for (i = 0; i < n / 2; i++)
+	for (i = n - 1; i >= 0 ; i--)
 	{
-		tmp = s[i];
-		s[i] = s[n - i - 1];
-		s[n - i - 1] = tmp;
-		_putchar(s[n - i - 1]);
+		_putchar(s[i]);
 	}
 }
