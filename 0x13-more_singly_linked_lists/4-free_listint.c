@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * free_listint2 - frees the memeory allocated to the node
+ * free_listint - frees the memeory allocated to the node
  * @head: pointer to first node
  *
  */
