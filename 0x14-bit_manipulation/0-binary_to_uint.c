@@ -11,12 +11,15 @@ unsigned int binary_to_uint(const char *b)
 
 	if (!b)
 		return (0);
+
 	while (b[length] != '\0')
 		length++;
+
 	for (i = 0; i < length; i++)
 	{
 		if (b[i] == '0' || b[i] == '1')
-		{	pwr = length - i - 1;
+		{
+			pwr = length - i - 1;
 			tm = 1;
 
 			for (j = 0; j < pwr; j++)
