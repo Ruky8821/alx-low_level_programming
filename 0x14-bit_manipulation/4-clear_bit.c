@@ -13,6 +13,6 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		return (-1);
 
 
-	*n = typemask & *n;
+	*n = ~typemask & *n;
 	return (1);
 }
