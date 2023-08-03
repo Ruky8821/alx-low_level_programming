@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * binary_to_uint - converts a binary stirng to decimal
+ * binary_to_uint - converts a base 2 string to decimal
  * @b: character string
- * Return: result on success or 0 if it fails
+ * Return: result on success
  */
 unsigned int binary_to_uint(const char *b)
 {
