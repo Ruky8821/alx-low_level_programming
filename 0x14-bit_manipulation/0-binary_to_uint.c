@@ -20,7 +20,7 @@ unsigned int binary_to_uint(const char *b)
 		if (b[i] !='0' && b[i] != '1')
 			return (0);
 
-		else (b[i] == '0' || b[i] == '1')
+		if  (b[i] == '0' || b[i] == '1')
 		{
 			power = len - i - 1;
 			idx = 1;
@@ -29,6 +29,8 @@ unsigned int binary_to_uint(const char *b)
 				idx *= 2;
 			result += (b[i] - '0') * idx;
 		}
+		else
+			return (0);
 	}
 	return (result);
 }
