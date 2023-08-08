@@ -16,7 +16,7 @@ int main(int arg, char **argv)
 		dprintf(2, USE);
 		exit(97);
 	}
-	buffer = malloc(BUFFER_S * sizeof (char));
+	buffer = malloc(BUFFER_S * sizeof(char));
 	if (buffer == NULL)
 		return (0);
 	from_file = open(argv[1], O_RDONLY);
@@ -25,7 +25,7 @@ int main(int arg, char **argv)
 		dprintf(2, READERR, argv[1]);
 		exit(98);
 	}
-	to_file = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664 );
+	to_file = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (to_file == -1)
 	{
 		dprintf(2, WRITERR, argv[2]);
