@@ -42,9 +42,9 @@ int main(int arg, char **argv)
 			dprintf(2, WRITERR, argv[2]), exit(99);
 	close(from_file);
 	close(to_file);
-	if (close(from_file))
+	if (!close(from_file))
 		dprintf(2, FDERR, from_file), exit(100);
-	if (close(to_file))
+	if (!close(to_file))
 		dprintf(2, FDERR, to_file), exit(100);
 	return (1);
 }
