@@ -8,7 +8,7 @@
 int main(int arg, char **argv)
 {
 	int from_file = 0, to_file = 0;
-	char buffer[BUFFER_S];
+	char *buffer;
 	ssize_t rd_op, wr_op;
 
 	if (arg != 3)
@@ -16,6 +16,7 @@ int main(int arg, char **argv)
 		dprintf(2, USE);
 		exit(97);
 	}
+	buffer = malloc(BUFFER_S * sizeof (char));
 	if (buffer == NULL)
 		return (0);
 	from_file = open(argv[1], O_RDONLY);
@@ -24,7 +25,7 @@ int main(int arg, char **argv)
 		dprintf(2, READERR, argv[1]);
 		exit(98);
 	}
-	to_file = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, PERMIT);
+	to_file = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664 );
 	if (to_file == -1)
 	{
 		dprintf(2, WRITERR, argv[2]);
@@ -41,9 +42,9 @@ int main(int arg, char **argv)
 			dprintf(2, WRITERR, argv[2]), exit(99);
 	close(from_file);
 	close(to_file);
-	if (!close(from_file))
+	if (close(from_file))
 		dprintf(2, FDERR, from_file), exit(100);
-	if (!close(to_file))
+	if (close(to_file))
 		dprintf(2, FDERR, to_file), exit(100);
 	return (1);
 }
