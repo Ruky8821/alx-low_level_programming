@@ -2,17 +2,17 @@
 /**
  * dlistint_len -  returns length of a doubly linked list
  * @h: header
+ * Return: lenght
  */
 size_t dlistint_len(const dlistint_t *h)
 {
 	size_t y;
 
 	y = 0;
-	while(h)
+	while (h)
 	{
-		h= h->next;
+		h = h->next;
 		y++;
 	}
 	return (y);
 }
-	

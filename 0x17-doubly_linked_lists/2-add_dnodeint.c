@@ -1,13 +1,14 @@
 #include "lists.h"
 /**
- * *add_dnodeint(dlistint_t **head -  insert at beginning
+ * *add_dnodeint -  insert at beginning
  * @head: first
  * @n: data
  * Return: new address
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
-{	
+{
 	dlistint_t *new = malloc(sizeof(dlistint_t));
+
 	if (!head)
 		return (NULL);
 	if (!new)
@@ -26,6 +27,6 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		*head = new;
 		new->next = NULL;
 	}
-	return(new);
+	return (new);
 
 }
