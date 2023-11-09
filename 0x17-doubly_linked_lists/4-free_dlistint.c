@@ -1,16 +1,17 @@
 #include "lists.h"
 /**
- * free_dlistint -  frees a list
- * @head: head of the struct list
+ * free_dlistint - frees a node
+ * @head: head
  */
 void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *newNode;
+	dlistint_t newNode;
 
-	if (head)
+	while (head)
 	{
 		newNode = head;
 		head = head->next;
 		free(newNode);
 	}
+
 }
